@@ -1,13 +1,13 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import User from "../domain/user.entity";
+import User from "../models/User";
 import { env } from "../config/env";
 import { HttpError } from "../utils/httpError";
 import type {
   CreateUserInput,
   RegisterInput,
   LoginInput,
-} from "../models/User.ts";
+} from "../schemas/user.schema";
 
 export async function createUser(data: CreateUserInput) {
   return await User.create(data);

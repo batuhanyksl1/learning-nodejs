@@ -1,0 +1,741 @@
+# Project dump
+root: /Users/batuhanyuksel/craftex/learning-nodejs
+
+================================================================================
+.gitignore
+--------------------------------------------------------------------------------
+.env
+node_modules
+dist
+
+================================================================================
+.vscode/settings.json
+--------------------------------------------------------------------------------
+{
+  "git.ignoreLimitWarning": true
+}
+
+
+================================================================================
+learningPath.md
+--------------------------------------------------------------------------------
+# 🚀 **GÜNCELLENMİŞ ROADMAP - 100 LEVEL**
+
+---
+
+# 🧱 **LEVEL 1–10: Core Fundamentals**
+
+### **1.** JavaScript Temelleri
+### **2.** TypeScript Temelleri
+### **3.** Async / Await – Promises
+### **4.** Event Loop derinlemesine
+### **5.** Modules (ESM + CommonJS)
+### **6.** npm, package.json, dependency yönetimi
+### **7.** TS Compiler Options (tsconfig)
+### **8.** Node.js architecture (single thread, libuv)
+### **9.** Error types (Error, TypeError, SyntaxError)
+### **10.** Debugging (Chrome DevTools, VSCode debugger)
+
+---
+
+# 🛣️ **LEVEL 11–20: HTTP & Express Foundations**
+
+### **11.** HTTP methods (GET/POST/DELETE/PATCH)
+### **12.** Request lifecycle
+### **13.** Express.js Router
+### **14.** Middleware mantığı
+### **15.** Global middleware
+### **16.** Static file serving
+### **17.** Query & Params farkı
+### **18.** REST architectural principles
+### **19.** Response types (JSON / stream / file)
+### **20.** API structure + folder conventions
+
+---
+
+# 🔐 **LEVEL 21–30: Authentication & Validation**
+
+### **21.** Password hashing (bcrypt)
+### **22.** Salt rounds ve güvenlik etkileri
+### **23.** JWT Access Token
+### **24.** JWT Refresh Token
+### **25.** Token signature + decode mantığı
+### **26.** Role-based access control (RBAC)
+### **27.** Permission-based (fine-grained) access
+### **28.** Zod validation basics
+### **29.** Zod advanced (refinement, transform)
+### **30.** Sanitization & input hardening
+
+---
+
+# 🗄️ **LEVEL 31–40: Database & Mongoose Mastery**
+
+### **31.** MongoDB CRUD
+### **32.** Mongoose schema + models
+### **33.** Schema validation
+### **34.** Relations (`ref`, ObjectId)
+### **35.** populate() (single & nested)
+### **36.** Indexes (unique, compound)
+### **37.** Query optimization (explain plan)
+### **38.** Aggregation pipelines
+### **39.** Transactions
+### **40.** Soft deletes + versioning
+
+---
+
+# ⚙️ **LEVEL 41–50: Architecture & Project Structure**
+
+### **41.** Controller layer
+### **42.** Service layer
+### **43.** Repository/data layer
+### **44.** DTO (Data Transfer Objects)
+### **45.** Dependency injection temel mantığı
+### **46.** Clean Architecture prensipleri
+### **47.** Domain-driven design temel kavramlar
+### **48.** Modular monolith tasarımı
+### **49.** Config management (env splitting)
+### **50.** Logging (Winston/Pino)
+
+---
+
+# 🛡️ **LEVEL 51–60: Security & Error Handling** ⭐ *YENİ*
+
+### **51.** Custom Error Classes
+### **52.** Centralized Error Handling
+### **53.** Error Middleware Patterns
+### **54.** Helmet.js (Security headers)
+### **55.** SQL/NoSQL Injection Prevention
+### **56.** XSS Protection
+### **57.** CSRF Protection
+### **58.** Security best practices (OWASP Top 10)
+### **59.** Input validation deepdive
+### **60.** Rate limiting & DDoS protection
+
+---
+
+# ⚡ **LEVEL 61–70: Advanced Backend Capabilities**
+
+### **61.** Rate limiting advanced patterns
+### **62.** Throttling
+### **63.** CORS yönetimi
+### **64.** Serialization/deserialization
+### **65.** File upload (Multer)
+### **66.** Cloudinary / S3 upload
+### **67.** File streaming
+### **68.** Background jobs (BullMQ, Redis)
+### **69.** Cron jobs
+### **70.** Caching strategies (Redis)
+
+---
+
+# 🧪 **LEVEL 71–80: Testing & Quality Assurance** ⭐ *YENİ*
+
+### **71.** Testing fundamentals (TDD, BDD)
+### **72.** Jest setup & configuration
+### **73.** Unit testing (controllers, services)
+### **74.** Integration testing
+### **75.** E2E testing (Supertest)
+### **76.** Mocking & Stubbing
+### **77.** Test coverage (Istanbul/nyc)
+### **78.** CI/CD test automation
+### **79.** Testing best practices
+### **80.** Load testing (k6, Artillery)
+
+---
+
+# 📚 **LEVEL 81–90: API Design & Documentation** ⭐ *YENİ*
+
+### **81.** API Versioning strategies
+### **82.** Swagger/OpenAPI basics
+### **83.** API documentation best practices
+### **84.** Postman collections
+### **85.** Auto-generated docs (tsoa, swagger-jsdoc)
+### **86.** API Design patterns
+### **87.** HATEOAS principles
+### **88.** GraphQL basics (optional alternative)
+### **89.** API response standards
+### **90.** Deprecation strategies
+
+---
+
+# 🛰️ **LEVEL 91–100: Realtime, Scaling & Production**
+
+### **91.** WebSocket temelleri
+### **92.** Socket.io rooms & namespaces
+### **93.** Realtime notifications
+### **94.** Presence system (online/offline)
+### **95.** Pub/Sub systems (Redis pubsub)
+### **96.** Horizontal scaling (Node clusters)
+### **97.** Load balancers
+### **98.** Reverse proxies (Nginx)
+### **99.** Performance profiling
+### **100.** High availability architecture (HA)
+
+---
+
+# 🛠️ **BONUS LEVEL 101–110: Professional DevOps** ⭐ *BONUS*
+
+### **101.** Dockerfile yazmak
+### **102.** Docker Compose (Node + Mongo + Redis)
+### **103.** PM2 process manager
+### **104.** CI/CD pipelines (GitHub Actions)
+### **105.** Linux server management
+### **106.** Nginx Reverse Proxy
+### **107.** HTTPS (Let's Encrypt)
+### **108.** Monitoring (Grafana + Prometheus)
+### **109.** Distributed tracing (Jaeger / Zipkin)
+### **110.** Microservices (Kafka, RabbitMQ, API Gateway)
+
+---
+
+# 🎯 **YENİ EKLENENLERİN MANTIGI**
+
+## 🛡️ **Security & Error Handling (51-60)**
+- **Neden bu seviyede?** Architecture'ı öğrendikten sonra, güvenlik ve hata yönetimi kritik hale geliyor
+- **Ne kazanırsın?** Production-ready, güvenli kod yazma becerisi
+
+## 🧪 **Testing (71-80)**
+- **Neden bu seviyede?** Temel backend becerilerini öğrendikten sonra, kod kaliteni test etmeyi öğreniyorsun
+- **Ne kazanırsın?** Profesyonel geliştirme süreçleri, CI/CD entegrasyonu
+
+## 📚 **API Design & Documentation (81-90)**
+- **Neden bu seviyede?** API'leri yazmayı öğrendikten sonra, bunları profesyonelce dokümante etmeyi öğreniyorsun
+- **Ne kazanırsın?** Takım çalışması, API maintainability, developer experience
+
+---
+
+# 🚀 **100 LEVEL TAMAM = Senior Backend Developer!**
+
+Bu yeni roadmap ile:
+
+✅ **Security-aware** backend developer
+✅ **Test-driven** development yapabilen
+✅ **Well-documented** API'ler oluşturabilen
+✅ **Production-ready** kod yazan
+✅ **Enterprise-level** düşünce yapısına sahip
+
+bir developer oluyorsun! 🔥
+
+---
+
+**Şimdi nereden başlıyoruz Batu?** 💪
+
+================================================================================
+package.json
+--------------------------------------------------------------------------------
+{
+  "name": "learning-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "server": "ts-node-dev --respawn --transpile-only src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^24.10.1",
+    "jsonwebtoken": "^9.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.0",
+    "zod": "^4.1.13"
+  }
+}
+
+
+================================================================================
+src/app.ts
+--------------------------------------------------------------------------------
+import express, { Request, Response } from "express";
+import userRoutes from "./routes/user.routes";
+import { errorMiddleware } from "./middlewares/error.middleware";
+
+export const app = express();
+
+app.use(express.json());
+
+app.get("/health", (_req: Request, res: Response) => {
+  res.json({
+    status: "ok",
+    message: "Server is up and running 🚀",
+  });
+});
+
+app.use("/", userRoutes);
+
+app.use(errorMiddleware);
+
+
+================================================================================
+src/config/env.ts
+--------------------------------------------------------------------------------
+
+
+================================================================================
+src/controllers/user.controller.ts
+--------------------------------------------------------------------------------
+import type { Request, Response, NextFunction } from "express";
+import type { AuthRequest } from "../middlewares/auth.middleware";
+import * as userService from "../services/user.service";
+
+export async function createUser(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  try {
+    const newUser = await userService.createUser(req.body);
+    res.status(201).json(newUser);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function listUsers(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  try {
+    const users = await userService.listUsers();
+    res.json(users);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function getUserByName(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  try {
+    const user = await userService.getUserByName(req.params.name);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    return res.json(user);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function updateUserByName(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  try {
+    const updated = await userService.updateUserByName(
+      req.params.name,
+      req.body
+    );
+    res.json(updated);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function register(
+  req: Request,
+  res: Response,
+  next: NextFunction
+) {
+  try {
+    const newUser = await userService.register(req.body);
+    res.status(201).json(newUser);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function login(req: Request, res: Response, next: NextFunction) {
+  try {
+    const result = await userService.login(req.body);
+    res.status(200).json(result);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export function profile(req: AuthRequest, res: Response) {
+  res.json({
+    message: "Protected content",
+    user: req.user,
+  });
+}
+
+
+================================================================================
+src/db/connect.ts
+--------------------------------------------------------------------------------
+import mongoose from "mongoose";
+import { env } from "../config/env";
+
+export async function connectDB() {
+  try {
+    await mongoose.connect(env.MONGO_URI);
+    console.log("🟢 MongoDB connected");
+  } catch (error) {
+    console.error("🔴 MongoDB connection error:", error);
+    process.exit(1);
+  }
+}
+
+
+================================================================================
+src/index.ts
+--------------------------------------------------------------------------------
+console.log("Hello Batu! TypeScript ile Node.js başlıyor 🚀");
+
+import { sum } from "./math";
+
+console.log(sum({ a: 10, b: 20 }));
+
+================================================================================
+src/math.ts
+--------------------------------------------------------------------------------
+interface MathInterface {
+  a: number;
+  b: number;
+}
+
+export const sum = ({ a, b }: MathInterface) : number => {
+  return a + b;
+};
+
+
+
+================================================================================
+src/middlewares/auth.middleware.ts
+--------------------------------------------------------------------------------
+import type { Request, Response, NextFunction } from "express";
+import jwt from "jsonwebtoken";
+import { env } from "../config/env";
+
+export interface AuthRequest extends Request {
+  user?: any;
+}
+
+export function authenticateToken(
+  req: AuthRequest,
+  res: Response,
+  next: NextFunction
+) {
+  const header = req.headers.authorization;
+
+  if (!header || !header.startsWith("Bearer ")) {
+    return res.status(401).json({ error: "No token provided" });
+  }
+
+  const token = header.split(" ")[1];
+
+  try {
+    const decoded = jwt.verify(token, env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (_err) {
+    return res.status(401).json({ error: "Invalid or expired token" });
+  }
+}
+
+
+================================================================================
+src/middlewares/error.middleware.ts
+--------------------------------------------------------------------------------
+import type { Request, Response, NextFunction } from "express";
+import { ZodError } from "zod";
+import { HttpError } from "../utils/httpError";
+
+export function errorMiddleware(
+  err: unknown,
+  _req: Request,
+  res: Response,
+  _next: NextFunction
+) {
+  if (err instanceof HttpError) {
+    return res.status(err.statusCode).json({
+      error: err.message,
+      details: err.details,
+    });
+  }
+
+  if (err instanceof ZodError) {
+    return res.status(400).json({
+      error: "Validation failed",
+      details: err.flatten(),
+    });
+  }
+
+  console.error("🔥 Global error:", err);
+
+  return res.status(500).json({ error: "Internal Server Error" });
+}
+
+
+================================================================================
+src/middlewares/validate.middleware.ts
+--------------------------------------------------------------------------------
+import type { Request, Response, NextFunction } from "express";
+import type { ZodTypeAny } from "zod";
+import { HttpError } from "../utils/httpError";
+
+export const validate = (schema: ZodTypeAny) => {
+  return (req: Request, _res: Response, next: NextFunction) => {
+    const result = schema.safeParse(req.body);
+
+    if (!result.success) {
+      const { fieldErrors, formErrors } = result.error.flatten();
+      return next(
+        new HttpError(400, "Validation failed", {
+          fieldErrors,
+          formErrors,
+        })
+      );
+    }
+
+    req.body = result.data;
+    next();
+  };
+};
+
+
+================================================================================
+src/models/User.ts
+--------------------------------------------------------------------------------
+import mongoose, { Schema, Document } from "mongoose";
+
+export interface IUser extends Document {
+  name: string;
+  age: number;
+  email: string;
+  password: string;
+  createdAt: Date;
+}
+
+const UserSchema: Schema<IUser> = new Schema({
+  name: { type: String, required: true },
+  age: { type: Number, required: false },
+
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true, select: false }, // select: false = default olarak geri dönmez
+
+  createdAt: { type: Date, default: Date.now },
+});
+
+export default mongoose.model<IUser>("User", UserSchema);
+
+
+================================================================================
+src/routes/user.routes.ts
+--------------------------------------------------------------------------------
+import { Router } from "express";
+import * as userController from "../controllers/user.controller";
+import { validate } from "../middlewares/validate.middleware";
+import {
+  createUserSchema,
+  registerSchema,
+  loginSchema,
+} from "../schemas/user.schema";
+import { authenticateToken } from "../middlewares/auth.middleware";
+
+const router = Router();
+
+router.post(
+  "/create-user",
+  validate(createUserSchema),
+  userController.createUser
+);
+router.get("/users", userController.listUsers);
+router.get("/users/:name", userController.getUserByName);
+router.post("/update-user/:name", userController.updateUserByName);
+
+router.post("/register", validate(registerSchema), userController.register);
+router.post("/login", validate(loginSchema), userController.login);
+router.get("/profile", authenticateToken, userController.profile);
+
+export default router;
+
+
+================================================================================
+src/schemas/user.schema.ts
+--------------------------------------------------------------------------------
+import { z } from "zod";
+
+export const createUserSchema = z.object({
+  name: z.string().min(2),
+  age: z.number().min(1),
+  email: z.string().email(),
+  password: z.string().min(8),
+});
+
+export type CreateUserInput = z.infer<typeof createUserSchema>;
+
+export const registerSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  age: z.number().min(1, "Age must be at least 1"),
+  email: z.string().email("Invalid email format"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+});
+
+export type RegisterInput = z.infer<typeof registerSchema>;
+
+export const loginSchema = z.object({
+  email: z.string().email("Invalid email format"),
+  password: z.string().min(1, "Password is required"),
+});
+
+export type LoginInput = z.infer<typeof loginSchema>;
+
+
+================================================================================
+src/server.ts
+--------------------------------------------------------------------------------
+import { app } from "./app";
+import { connectDB } from "./db/connect";
+import { env } from "./config/env";
+
+connectDB();
+
+app.listen(env.PORT, () => {
+  console.log(`🚀 Server listening on http://localhost:${env.PORT}`);
+});
+
+
+================================================================================
+src/services/user.service.ts
+--------------------------------------------------------------------------------
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import User from "../models/User";
+import { env } from "../config/env";
+import { HttpError } from "../utils/httpError";
+import type {
+  CreateUserInput,
+  RegisterInput,
+  LoginInput,
+} from "../schemas/user.schema";
+
+export async function createUser(data: CreateUserInput) {
+  return await User.create(data);
+}
+
+export async function listUsers() {
+  return await User.find();
+}
+
+export async function getUserByName(name: string) {
+  return await User.findOne({ name }).select("__v");
+}
+
+export async function updateUserByName(name: string, data: unknown) {
+  const user = await User.findOne({ name }).select("__v");
+
+  return await User.findOneAndUpdate(
+    { name, __v: (user?.__v ?? 0) + 1 },
+    data as any,
+    { new: true }
+  );
+}
+
+export async function register(data: RegisterInput) {
+  const { name, email, password, age } = data;
+
+  const existing = await User.findOne({ email });
+  if (existing) {
+    throw new HttpError(400, "User already exists");
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  return await User.create({
+    name,
+    email,
+    password: hashedPassword,
+    age,
+  });
+}
+
+export async function login(data: LoginInput) {
+  const { email, password } = data;
+
+  const user = await User.findOne({ email }).select("+password");
+  if (!user) {
+    throw new HttpError(401, "Invalid credentials");
+  }
+
+  const isPasswordValid = await bcrypt.compare(password, user.password);
+  if (!isPasswordValid) {
+    throw new HttpError(401, "Invalid credentials");
+  }
+
+  const token = jwt.sign({ id: user._id, email: user.email }, env.JWT_SECRET, {
+    expiresIn: env.JWT_EXPIRES_IN,
+  } as jwt.SignOptions);
+
+  const userInfo = {
+    id: user._id,
+    name: user.name,
+    age: user.age,
+    email: user.email,
+  };
+
+  return {
+    result: "success",
+    token,
+    user: userInfo,
+  };
+}
+
+
+================================================================================
+src/types.ts
+--------------------------------------------------------------------------------
+export interface CreateUserDto {
+    name: string,
+    age: number
+}
+
+================================================================================
+src/utils/httpError.ts
+--------------------------------------------------------------------------------
+export class HttpError extends Error {
+  public readonly statusCode: number;
+  public readonly details?: unknown;
+
+  constructor(statusCode: number, message: string, details?: unknown) {
+    super(message);
+    this.statusCode = statusCode;
+    this.details = details;
+  }
+}
+
+
+================================================================================
+tsconfig.json
+--------------------------------------------------------------------------------
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
+

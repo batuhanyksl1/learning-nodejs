@@ -13,6 +13,6 @@ app.get("/health", (_req: Request, res: Response) => {
   });
 });
 
-app.use("/users", userRoutes);
+app.use("/", userRoutes);
 
 app.use(errorMiddleware);
