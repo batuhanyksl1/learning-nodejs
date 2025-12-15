@@ -3,32 +3,18 @@ import jwt from "jsonwebtoken";
 import User from "../models/User";
 import { env } from "../config/env";
 import { HttpError } from "../utils/httpError";
-import type {
-  CreateUserInput,
-  RegisterInput,
-  LoginInput,
-} from "../schemas/user.schema";
-
-export async function createUser(data: CreateUserInput) {
-  return await User.create(data);
-}
+import type { RegisterInput, LoginInput } from "../schemas/user.schema";
 
 export async function listUsers() {
   return await User.find();
 }
 
 export async function getUserByName(name: string) {
-  return await User.findOne({ name }).select("__v");
+  return await User.findOne({ name }).select("-password -__v");
 }
 
 export async function updateUserByName(name: string, data: unknown) {
-  const user = await User.findOne({ name }).select("__v");
-
-  return await User.findOneAndUpdate(
-    { name, __v: (user?.__v ?? 0) + 1 },
-    data as any,
-    { new: true }
-  );
+  return await User.findOneAndUpdate({ name }, data as any, { new: true });
 }
 
 export async function register(data: RegisterInput) {
@@ -41,12 +27,19 @@ export async function register(data: RegisterInput) {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  return await User.create({
+  const created = await User.create({
     name,
     email,
     password: hashedPassword,
     age,
   });
+
+  return {
+    id: created._id,
+    name: created.name,
+    age: created.age,
+    email: created.email,
+  };
 }
 
 export async function login(data: LoginInput) {

@@ -2,19 +2,6 @@ import type { Request, Response, NextFunction } from "express";
 import type { AuthRequest } from "../middlewares/auth.middleware";
 import * as userService from "../services/user.service";
 
-export async function createUser(
-  req: Request,
-  res: Response,
-  next: NextFunction
-) {
-  try {
-    const newUser = await userService.createUser(req.body);
-    res.status(201).json(newUser);
-  } catch (err) {
-    next(err);
-  }
-}
-
 export async function listUsers(
   req: Request,
   res: Response,

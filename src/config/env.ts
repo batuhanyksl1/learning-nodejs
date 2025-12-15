@@ -10,9 +10,10 @@ const envSchema = z.object({
   MONGO_URI: z.string().min(1, "MONGO_URI is required"),
 
   JWT_SECRET: z.string().min(1, "JWT_SECRET is required"),
-  JWT_EXPIRES_IN: z.string().min(1).default("20s"),
+  JWT_EXPIRES_IN: z.string().min(1).default("20m"),
 });
 
+export type Env = z.infer<typeof envSchema>;
 let parsedEnv: Env;
 
 try {
@@ -21,7 +22,9 @@ try {
   if (error instanceof z.ZodError) {
     console.error("❌ Missing or invalid environment variables:");
     console.error(JSON.stringify(error.flatten(), null, 2));
-    console.error("Please create a .env file (see .env.example) before starting the server.");
+    console.error(
+      "Please create a .env file (see .env.example) before starting the server."
+    );
     process.exit(1);
   }
 
@@ -29,4 +32,3 @@ try {
 }
 
 export const env = parsedEnv;
-export type Env = z.infer<typeof envSchema>;
