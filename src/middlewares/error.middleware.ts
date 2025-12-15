@@ -1,6 +1,8 @@
 import type { Request, Response, NextFunction } from "express";
 import { ZodError } from "zod";
-import { HttpError } from "../utils/httpError";
+import { AppError } from "../errors/AppError";
+import { Messages } from "../constants/messages";
+import { logger } from "../utils/logger";
 
 export function errorMiddleware(
   err: unknown,
@@ -8,7 +10,7 @@ export function errorMiddleware(
   res: Response,
   _next: NextFunction
 ) {
-  if (err instanceof HttpError) {
+  if (err instanceof AppError) {
     return res.status(err.statusCode).json({
       error: err.message,
       details: err.details,
@@ -17,12 +19,12 @@ export function errorMiddleware(
 
   if (err instanceof ZodError) {
     return res.status(400).json({
-      error: "Validation failed",
+      error: Messages.ERROR.VALIDATION_FAILED,
       details: err.flatten(),
     });
   }
 
-  console.error("🔥 Global error:", err);
+  logger.error("Global error:", err);
 
-  return res.status(500).json({ error: "Internal Server Error" });
+  return res.status(500).json({ error: Messages.ERROR.INTERNAL_ERROR });
 }

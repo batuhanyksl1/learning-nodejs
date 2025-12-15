@@ -1,0 +1,24 @@
+export const ErrorCodes = {
+  // Authentication errors
+  INVALID_CREDENTIALS: "INVALID_CREDENTIALS",
+  TOKEN_EXPIRED: "TOKEN_EXPIRED",
+  TOKEN_INVALID: "TOKEN_INVALID",
+  NO_TOKEN: "NO_TOKEN",
+  UNAUTHORIZED: "UNAUTHORIZED",
+
+  // Validation errors
+  VALIDATION_ERROR: "VALIDATION_ERROR",
+  INVALID_INPUT: "INVALID_INPUT",
+
+  // User errors
+  USER_NOT_FOUND: "USER_NOT_FOUND",
+  USER_ALREADY_EXISTS: "USER_ALREADY_EXISTS",
+  EMAIL_ALREADY_EXISTS: "EMAIL_ALREADY_EXISTS",
+
+  // Generic errors
+  NOT_FOUND: "NOT_FOUND",
+  INTERNAL_ERROR: "INTERNAL_ERROR",
+  BAD_REQUEST: "BAD_REQUEST",
+} as const;
+
+export type ErrorCode = (typeof ErrorCodes)[keyof typeof ErrorCodes];

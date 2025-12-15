@@ -1,6 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
 import type { ZodTypeAny } from "zod";
-import { HttpError } from "../utils/httpError";
+import { AppError } from "../errors/AppError";
+import { Messages } from "../constants/messages";
 
 export const validate = (schema: ZodTypeAny) => {
   return (req: Request, _res: Response, next: NextFunction) => {
@@ -9,7 +10,7 @@ export const validate = (schema: ZodTypeAny) => {
     if (!result.success) {
       const { fieldErrors, formErrors } = result.error.flatten();
       return next(
-        new HttpError(400, "Validation failed", {
+        new AppError(400, Messages.ERROR.VALIDATION_FAILED, {
           fieldErrors,
           formErrors,
         })

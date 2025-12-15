@@ -1,9 +1,9 @@
 import { app } from "./app";
-import { connectDB } from "./db/connect";
-import { env } from "./config/env";
+import { connectDB, env } from "./config";
+import { logger } from "./utils/logger";
 
 connectDB();
 
 app.listen(env.PORT, () => {
-  console.log(`🚀 Server listening on http://localhost:${env.PORT}`);
+  logger.info(`Server listening on http://localhost:${env.PORT}`);
 });
